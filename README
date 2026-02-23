@@ -1,0 +1,139 @@
+App User Behavior Segmentation Using Unsupervised Machine Learning
+📌 Project Overview
+
+This project focuses on analyzing large-scale app user activity data and grouping users based on their behavioral patterns using unsupervised machine learning techniques.
+
+Since the dataset does not contain predefined labels such as active users or churned users, clustering is applied to automatically discover meaningful user segments.
+These segments help businesses understand engagement levels, detect at-risk users, and design personalized strategies.
+
+🎯 Problem Statement
+
+Applications generate huge amounts of user interaction data, but understanding behavior without predefined labels is challenging.
+
+This project aims to:
+
+Identify groups of users with similar engagement patterns
+
+Detect high-value and low-engagement users
+
+Support retention strategies and targeted marketing
+
+Enable data-driven product decisions
+
+🧠 Machine Learning Approach
+✔ Data Cleaning & Preprocessing
+
+Handled missing values
+
+Selected behavioral numerical features
+
+Removed non-informative attributes
+
+✔ Feature Engineering
+
+Selected engagement-driven metrics such as sessions, duration, activity scores, and interaction counts
+
+✔ Feature Scaling
+
+Applied StandardScaler to normalize features
+
+Ensured equal contribution in distance-based clustering
+
+✔ Clustering Model
+
+Used K-Means Clustering to group users based on behavioral similarity
+
+✔ Optimal Cluster Selection
+
+Applied Elbow Method using inertia values
+
+Identified 4 clusters as optimal
+
+✔ Dimensionality Reduction
+
+Used PCA to visualize cluster separation in 2D space
+
+✔ Cluster Profiling
+
+Users were categorized into:
+
+High Engagement Users – frequent sessions, strong interaction, low churn risk
+
+Moderate Users – consistent but average activity
+
+Low / At-Risk Users – low engagement and higher churn probability
+
+Occasional Users – irregular usage patterns
+
+💼 Business Impact
+
+This project enables:
+
+🎯 Targeted marketing campaigns
+
+🔁 Early churn detection
+
+⭐ Personalized user experience
+
+📈 Feature optimization decisions
+
+📊 Data-driven product strategies
+
+📂 Project Structure
+app-user-segmentation/
+│
+├── data/
+│   └── app_user_behavior_dataset.csv
+│
+├── src/
+│   ├── data.py
+│   ├── features.py
+│   ├── clustering.py
+│   ├── visualize.py
+│   └── main.py
+│
+├── data/
+│   └── clustered_users.csv
+│
+├── requirements.txt
+└── README.md
+
+
+
+📊 Output
+
+The model generates:
+
+Cluster label for each user
+
+Segmented dataset saved as:
+
+output/clustered_users.csv
+
+🧪 Technologies Used
+
+Python
+
+Pandas & NumPy
+
+Matplotlib & Seaborn
+
+Scikit-learn
+
+PCA for visualization
+
+🚀 Key Learnings from This Project
+
+Real-world data preprocessing
+
+Feature selection for clustering
+
+StandardScaler usage in distance models
+
+K-Means clustering implementation
+
+Elbow method for optimal cluster selection
+
+PCA visualization
+
+Translating ML output into business insights

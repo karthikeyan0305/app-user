@@ -24,7 +24,7 @@ cluster_map = {
 }   
 
 df['user_segment'] = df['cluster'].map(cluster_map)
-
+# df['cluster'] = df.groupby('cluster')['cluster'].transform(lambda x: x.map(cluster_map))
 df.to_csv("data/clustered_users.csv", index=False)
 
 print("Clustering completed. Results saved to data/clustered_users.csv")
